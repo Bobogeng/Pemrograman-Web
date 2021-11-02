@@ -8,7 +8,6 @@ body {
   background-color: #e8f4ff;
   width: 80%;
   margin: auto;
-  margin-top: 100px;
   border: 1px solid black;
 }
 
@@ -39,6 +38,7 @@ nav {
   display: flex;
   padding: 50px;
   flex-direction: row;
+  margin-bottom: 20vh;
 }
 
 .body-content #table-1 {
