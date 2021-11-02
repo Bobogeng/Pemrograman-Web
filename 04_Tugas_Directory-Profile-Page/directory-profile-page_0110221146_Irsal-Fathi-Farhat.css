@@ -30,7 +30,7 @@
 .bottom-content {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
 }
 
 .row {
