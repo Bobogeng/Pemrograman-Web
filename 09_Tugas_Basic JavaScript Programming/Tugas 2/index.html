@@ -13,12 +13,6 @@
         const n = document.createTextNode(m.value)
         p.appendChild(n)
         e.appendChild(p)
-        m.addEventListener("keypressed", function(event) {
-          if (event.key === "Enter") {
-            event.preventDefault()
-            document.getElementById("kirim").click()
-          }
-        })
         m = document.getElementById("pesan").value=""
       }
     </script>
@@ -34,7 +28,7 @@
     </div>
     <div style="position: absolute; width: 100%; bottom: 0; background-color: whitesmoke; border-top: 1px solid grey;">
       <div style="display: flex; padding: 2px;">
-        <input type="text" id="pesan" style="width: 100%; margin-right: 2px;" placeholder="Ketik disini..." onchange="message()"><input type="button" id="kirim" value="Kirim">
+        <input type="text" id="pesan" style="width: 100%; margin-right: 2px;" placeholder="Ketik disini..." onchange="message()"><button type="button" id="kirim">Kirim</button>
       </div>
     </div>    
   </div>
