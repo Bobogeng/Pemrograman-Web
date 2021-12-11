@@ -11,24 +11,18 @@
             let r = Number(document.getElementById("hasil").value)
             function region() {
                 let v = document.getElementById("valas")
-                if (v.value == 9915) {
-                    j = 9915 * n
+                if (v.value == "US") {
                     return 9915 * n
-                } else if (v.value == 13472) {
-                    j = 13472 * n
-                    return j
-                } else if (v.value == 874) {
-                    j = 874 * n
-                    return j
-                } else if (v.value == 120) {
-                    j = 120 * n
-                    return j
-                } else if (v.value == 15888) {
-                    j = 15888 * n
-                    return j
-                } else if (v.value == 3592) {
-                    j = 3592 * n
-                    return j
+                } else if (v.value == "SNG") {
+                    return 13472 * n
+                } else if (v.value == "M") {
+                    return 874 * n
+                } else if (v.value == "JP") {
+                    return 120 * n
+                } else if (v.value == "EUR") {
+                    return 15888 * n
+                } else if (v.value == "AS") {
+                    return 3592 * n
                 }
             }
             document.getElementById("hasil").value=region()
@@ -52,12 +46,12 @@
                 <td><input type="number" id="nilai" value="0" onchange="kurs()" min="0"></td>
                 <td>
                     <select name="valas" id="valas" onchange="region()" onclick="reset()">
-                        <option value="9915">Dollar US</option>
-                        <option value="13472">Dollar Singapore</option>
-                        <option value="874">Ringgih Malaysia</option>
-                        <option value="120">Yen Jepang</option>
-                        <option value="15888">Euro</option>
-                        <option value="3592">Riyal Arab Saudi</option>
+                        <option value="US">Dollar US</option>
+                        <option value="SNG">Dollar Singapore</option>
+                        <option value="M">Ringgih Malaysia</option>
+                        <option value="JP">Yen Jepang</option>
+                        <option value="EUR">Euro</option>
+                        <option value="AS">Riyal Arab Saudi</option>
                     </select>
                 </td>
                 <td><input type="number" id="hasil" min="0"></td>
