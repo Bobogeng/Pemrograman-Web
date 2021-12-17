@@ -5,10 +5,10 @@ $primary2: #1fab89;
 $textCol: #1f1f1f;
 
 // import fonts - font-family: 'Nunito', sans-serif;
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 
 @mixin main-font {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 @mixin hero_btn($col1, $col2, $pad1, $pad2, $bRadius) {
@@ -23,7 +23,6 @@ $textCol: #1f1f1f;
   &:hover {
     background-color: transparent;
     color: $col1;
-
   }
 }
 
@@ -375,7 +374,8 @@ a:focus {
         text-transform: uppercase;
       }
 
-      p {}
+      p {
+      }
 
       a {
         color: $primary2;
@@ -478,7 +478,7 @@ a:focus {
         border-radius: 5px;
         display: flex;
         opacity: 0;
-        transition: all .3s;
+        transition: all 0.3s;
 
         a {
           color: $primary1;
@@ -596,7 +596,7 @@ a:focus {
       img {
         width: 100%;
         border-radius: 100%;
-        border: 7px solid rgba($color: #fff, $alpha: .45);
+        border: 7px solid rgba($color: #fff, $alpha: 0.45);
       }
     }
 
@@ -605,7 +605,6 @@ a:focus {
       flex-direction: column;
 
       .name {
-
         img {
           width: 25px;
           margin-bottom: 5px;

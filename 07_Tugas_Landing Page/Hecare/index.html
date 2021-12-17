@@ -40,11 +40,13 @@
   <div class="hero_area">
 
     <div class="hero_bg_box">
-      <img src="images/hero-bg.png" alt="">
+      <div style="position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); mix-blend-mode: hard-light;"></div>
+      <div style="position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); mix-blend-mode: saturation;"></div>
+      <img src="images/hero-bg.jpg" alt="">
     </div>
 
     <!-- header section strats -->
-    <header class="header_section">
+    <header class="header_section shadow-sm">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
@@ -233,7 +235,7 @@
       </div>
       <div class="row">
         <div class="col-sm-6 col-lg-4 mx-auto">
-          <div class="box">
+          <div class="box shadow">
             <div class="img-box">
               <img src="images/d1.jpg" alt="">
             </div>
@@ -262,7 +264,7 @@
           </div>
         </div>
         <div class="col-sm-6 col-lg-4 mx-auto">
-          <div class="box">
+          <div class="box shadow">
             <div class="img-box">
               <img src="images/d2.jpg" alt="">
             </div>
@@ -291,7 +293,7 @@
           </div>
         </div>
         <div class="col-sm-6 col-lg-4 mx-auto">
-          <div class="box">
+          <div class="box shadow">
             <div class="img-box">
               <img src="images/d3.jpg" alt="">
             </div>
@@ -345,7 +347,7 @@
                 </div>
                 <div class="col-lg-6">
                   <div>
-                    <input type="text" placeholder="Nomor Telephone" />
+                    <input type="tel" placeholder="Nomor Telephone"/>
                   </div>
                 </div>
               </div>
@@ -375,8 +377,9 @@
   </section>
   <!-- end contact section -->
 
+  
   <!-- client section -->
-
+  
   <section class="client_section layout_padding-bottom" id="contact">
     <div class="container">
       <div class="heading_container heading_center ">
@@ -391,12 +394,12 @@
               <div class="col-md-11 col-lg-10 mx-auto">
                 <div class="box">
                   <div class="img-box">
-                    <img src="images/client.jpg" alt="" />
+                    <img src="images/client1.png" alt="" />
                   </div>
                   <div class="detail-box">
                     <div class="name">
                       <h6>
-                        Alan Emerson
+                        Irsal Fathi Farhat
                       </h6>
                     </div>
                     <p>
@@ -413,18 +416,16 @@
               <div class="col-md-11 col-lg-10 mx-auto">
                 <div class="box">
                   <div class="img-box">
-                    <img src="images/client.jpg" alt="" />
+                    <img src="images/client2.png" alt="" />
                   </div>
                   <div class="detail-box">
                     <div class="name">
                       <h6>
-                        Alan Emerson
+                        Achmad Faisal Ghifari
                       </h6>
                     </div>
                     <p>
-                      Enim consequatur odio assumenda voluptas voluptatibus esse nobis officia. Magnam, aspernatur
-                      nostrum explicabo, distinctio laudantium delectus deserunt quia quidem magni corporis earum
-                      inventore totam consectetur corrupti! Corrupti, nihil sunt? Natus.
+                      Tadinya saya memiliki masalah pengelihatan, setelah berobat di Hecare dan di tangani dokter profesional, puji tuhan alhamdulillah mata saya kembali normal
                     </p>
                     <i class="fa fa-quote-left" aria-hidden="true"></i>
                   </div>
@@ -437,18 +438,16 @@
               <div class="col-md-11 col-lg-10 mx-auto">
                 <div class="box">
                   <div class="img-box">
-                    <img src="images/client.jpg" alt="" />
+                    <img src="images/client3.jpg" alt="" />
                   </div>
                   <div class="detail-box">
                     <div class="name">
                       <h6>
-                        Alan Emerson
+                        Mohamad Hafizh Ashifani
                       </h6>
                     </div>
                     <p>
-                      Enim consequatur odio assumenda voluptas voluptatibus esse nobis officia. Magnam, aspernatur
-                      nostrum explicabo, distinctio laudantium delectus deserunt quia quidem magni corporis earum
-                      inventore totam consectetur corrupti! Corrupti, nihil sunt? Natus.
+                      Saya adalah pasien yang mengalami demam berdarah, sebelum berobat di Hecare saya berobat di apotek terdekat namun tidak kunjung sembuh, Tetapi setelah saya berobat di Hecare karena pelayanan dari para dokter ahli saya dapat beraktifitas kembali seperti biasanya
                     </p>
                     <i class="fa fa-quote-left" aria-hidden="true"></i>
                   </div>
@@ -470,9 +469,17 @@
       </div>
     </div>
   </section>
-
+  
   <!-- end client section -->
 
+  <!-- video section -->
+
+  <div class="video_section">
+    <iframe class="shadow" width="560" height="315" src="https://www.youtube.com/embed/7JoFP0xDHI4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <!-- end video section -->
+  
   <!-- footer section -->
   <footer class="footer_section">
     <div class="container">
@@ -483,37 +490,40 @@
               Kunjungi Kami
             </h4>
             <div class="contact_link_box">
-              <a href="">
+              <a href="https://www.google.com/maps/place/Kota+Depok,+Jawa+Barat/data=!4m2!3m1!1s0x2e69e95620a297d3:0x1cfd4042316fb217?sa=X&ved=2ahUKEwjGw__Uoev0AhVP7XMBHfHuAZ0Q8gF6BAgWEAE" target="_blank">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
-                  Location
+                  Depok, Jawa Barat
                 </span>
               </a>
-              <a href="">
+              <a href="#footer">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
                   Call +01 1234567890
                 </span>
               </a>
-              <a href="">
+              <a href="https://mail.google.com/mail/u/0/?tab=rm#inbox?compose=new" target="_blank">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  demo@gmail.com
+                  irsalfathifarhat@gmail.com
                 </span>
               </a>
             </div>
           </div>
-          <div class="footer_social">
-            <a href="">
+          <div class="footer_social" id="footer">
+            <a href="https://www.linkedin.com/in/irsal-fathi-farhat-30296921b/" target="_blank">
               <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
+            <a href="https://github.com/Bobogeng" target="_blank">
+              <i class="fa fa-github" aria-hidden="true"></i>
             </a>
-            <a href="">
+            <a href="https://dribbble.com/bobogeng" target="_blank">
+              <i class="fa fa-dribbble" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/irsal-fathi-farhat-30296921b/" target="_blank">
               <i class="fa fa-linkedin" aria-hidden="true"></i>
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/irsal_f.f/" target="_blank">
               <i class="fa fa-instagram" aria-hidden="true"></i>
             </a>
           </div>
@@ -534,19 +544,19 @@
               Links
             </h4>
             <div class="footer_links">
-              <a class="active" href="index.html">
+              <a class="active" href="#home">
                 Beranda
               </a>
-              <a class="" href="departments.html">
+              <a class="" href="#layanan">
                 Layanan
               </a>
-              <a class="" href="about.html">
+              <a class="" href="#about">
                 Tentang Kami
               </a>
-              <a class="" href="doctors.html">
+              <a class="" href="#dokter">
                 Dokter
               </a>
-              <a class="" href="contact.html">
+              <a class="" href="#contact">
                 Kontak
               </a>
             </div>
@@ -567,9 +577,7 @@
       <div class="footer-info">
         <p>
           &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates<br><br></a>
-          &copy; <span id="displayYear"></span> Distributed By
-          <a href="https://themewagon.com/">ThemeWagon</a>
+          <a href="https://www.instagram.com/irsal_f.f/" target="_blank"><b>Irsal Fathi Farhat</b></a>
         </p>
 
       </div>
