@@ -30,18 +30,13 @@
                 $ahmad = new BankAccount("C001", 6000000, "Ahmad");
                 $budi = new BankAccount("C002", 5350000, "Budi");
                 $kurniawan = new BankAccount("C003", 2500000, "Kurniawan");
-                $totalAccount = array(
-                    1 =>
-                    array("account" => $ahmad->account(), "pemilik" => $ahmad->customer, "saldo" => $ahmad->saldo()),
-                    array("account" => $budi->account(), "pemilik" => $budi->customer, "saldo" => $budi->saldo()),
-                    array("account" => $kurniawan->account(), "pemilik" => $kurniawan->customer, "saldo" => $kurniawan->saldo())
-                );
+                $totalAccount = array(1 => $ahmad, $budi, $kurniawan);
                 foreach ($totalAccount as $no => $value) {
                     echo "<tr>";
                     echo "<td>" . $no . "</td>";
-                    echo "<td>" . $value["account"] . "</td>";
-                    echo "<td>" . $value["pemilik"] . "</td>";
-                    echo "<td>" . $value["saldo"] . "</td>";
+                    echo "<td>" . $value->account() . "</td>";
+                    echo "<td>" . $value->customer . "</td>";
+                    echo "<td>" . $value->saldo() . "</td>";
                     echo "</tr>";
                 }
                 ?>
@@ -66,18 +61,13 @@
                 $ahmad->transfer($budi, 1500000);
                 $ahmad->transfer($kurniawan, 500000);
                 $budi->withdraw(2500000);
-                $totalAccount = array(
-                    1 =>
-                    array("account" => $ahmad->account(), "pemilik" => $ahmad->customer, "saldo" => $ahmad->saldo()),
-                    array("account" => $budi->account(), "pemilik" => $budi->customer, "saldo" => $budi->saldo()),
-                    array("account" => $kurniawan->account(), "pemilik" => $kurniawan->customer, "saldo" => $kurniawan->saldo())
-                );
+                $totalAccount = array(1 => $ahmad, $budi, $kurniawan);
                 foreach ($totalAccount as $no => $value) {
                     echo "<tr>";
                     echo "<td>" . $no . "</td>";
-                    echo "<td>" . $value["account"] . "</td>";
-                    echo "<td>" . $value["pemilik"] . "</td>";
-                    echo "<td>" . $value["saldo"] . "</td>";
+                    echo "<td>" . $value->account() . "</td>";
+                    echo "<td>" . $value->customer . "</td>";
+                    echo "<td>" . $value->saldo() . "</td>";
                     echo "</tr>";
                 }
                 ?>
