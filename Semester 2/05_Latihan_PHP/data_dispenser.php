@@ -1,14 +1,14 @@
 <?php
 require_once "class_dispenser.php";
-$susu = new Gelas("Susu", 2000);
+$susu = new Minuman("Susu", 2000);
+$susu->isiGalon(2500);
+echo ("</br>");
+$susu->cetakDispenser();
+echo ("</br>");
 $susu->cetak();
 echo ("</br>");
-$susu->cetakDispenser();
+$susu->isiGelas(250);
 echo ("</br>");
-$susu->isi(250);
-echo ("</br>");
-$susu->cetakDispenser();
-echo ("</br>");
-$susu->isiUlang(5);
+$susu->isiUlangGelas(5);
 echo ("</br>");
 $susu->cetakDispenser();

@@ -2,14 +2,15 @@
 class Dispenser
 {
     protected $namaMinuman;
-    protected $volume;
+    protected $volume = 0;
     protected $hargaSegelas;
     private $saldo = 5000;
     private $jumlahGelas = 5;
     private $volumeGelas = 250;
 
-    public function default(int $saldo, int $jmlGelas, int $volgelas)
+    public function default(int $vol, int $saldo, int $jmlGelas, int $volgelas)
     {
+        $this->volume = $vol;
         $this->saldo = $saldo;
         $this->jumlahGelas = $jmlGelas;
         $this->volumeGelas = $volgelas;
@@ -17,29 +18,37 @@ class Dispenser
 
     public function cetakDispenser()
     {
-        echo "Saldo yang dimiliki " . $this->saldo . ", jumlah gelas yang dimiliki " . $this->jumlahGelas . ", volume gelas yang dimiliki " . $this->jumlahGelas;
+        echo "Volume air galon yang dimiliki " . $this->volume . "ml</br>Saldo yang dimiliki " . $this->saldo . "</br>Jumlah gelas yang dimiliki " . $this->jumlahGelas . "</br>Volume gelas yang dimiliki " . $this->jumlahGelas;
     }
 
-    public function isi(int $vol)
+    public function isiGalon(int $vol)
     {
-        $this->volume = $vol;
-        if ($this->volume > 0 && $this->volume <= $this->volumeGelas && $this->jumlahGelas > 0) {
-            $this->jumlahGelas--;
-            $this->saldo = $this->saldo + $this->hargaSegelas;
-            echo "Anda telah menuangkan air sebanyak " . $this->volume . "ml kedalam gelas berukuran " . $this->volumeGelas . "ml dengan harga " . $this->hargaSegelas;
-        } elseif ($this->jumlahGelas <= 0) {
-            echo "Tidak ada gelas tersedia, silahkan isi ulang gelas";
-        } elseif ($this->volume <= 0) {
-            echo "Anda tidak menuangkan air sama sekali";
-        } elseif ($this->volume > $this->volumeGelas) {
-            echo "Anda terlalu banyak menuangkan air";
+        if ($vol > 0) {
+            $this->volume = $vol;
+            echo "Anda telah mengisi volume air galon sebesar " . $this->volume . "ml";
+        } else {
+            echo "Volume air tidak bisa kurang dari 0";
         }
     }
 
-    public function isiUlang(int $gelas)
+    public function isiGelas()
+    {
+        if ($this->volume >= $this->volumeGelas && $this->jumlahGelas > 0) {
+            $this->jumlahGelas--;
+            $this->volume = $this->volume - $this->volumeGelas;
+            $this->saldo = $this->saldo + $this->hargaSegelas;
+            echo "Anda telah menuangkan air kedalam gelas berukuran " . $this->volumeGelas . "ml dengan harga " . $this->hargaSegelas;
+        } elseif ($this->jumlahGelas <= 0) {
+            echo "Tidak ada gelas tersedia, silahkan isi ulang gelas";
+        } elseif ($this->volume < $this->volumeGelas) {
+            echo "Volume air galon tidak mencukupi";
+        }
+    }
+
+    public function isiUlangGelas(int $gelas)
     {
         $harga = 500;
-        $totalHarga = 500 * $gelas;
+        $totalHarga = $harga * $gelas;
         if ($this->saldo >= $totalHarga && $totalHarga >= $harga) {
             $this->saldo = $this->saldo - $totalHarga;
             $this->jumlahGelas = $this->jumlahGelas + $gelas;
@@ -52,7 +61,7 @@ class Dispenser
     }
 }
 
-class Gelas extends Dispenser
+class Minuman extends Dispenser
 {
     public function __construct(string $nama, int $harga)
     {
